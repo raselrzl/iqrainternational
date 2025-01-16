@@ -9,7 +9,7 @@ export default function ServiceCard({ heading, details, image }) {
   const toggleExpansion = () => setIsExpanded(!isExpanded);
 
   return (
-    <div className="flex p-4 bg-gray-800 rounded-lg shadow-lg mb-4">
+    <div className="flex p-4 bg-gray-800 rounded-lg shadow-lg mb-4 ">
       {/* Left side: Small Image */}
       <div className="w-20 h-20 mr-4">
         <Image

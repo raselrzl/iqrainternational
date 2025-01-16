@@ -6,7 +6,7 @@ import { FaSquareFacebook } from "react-icons/fa6";
 export function Footer() {
   return (
     <>
-      <div className="fixed bottom-0 left-0 flex w-full justify-center gap-4 p-6 text-3xl">
+      <div className="fixed bottom-0 left-0 flex w-full justify-center gap-4 p-6 text-3xl bg-black">
         <Link
           href=""
           target="_blank"

@@ -67,7 +67,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-black">
       <div className="md:w-[60%] mx-auto h-auto mt-[100px] px-6"> 
         {/* Using grid layout to create a two-column design on larger screens */}
         <h2 className="text-2xl font-semibold mb-4 text-center ">Our Services</h2>
