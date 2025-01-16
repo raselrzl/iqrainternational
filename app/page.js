@@ -1,5 +1,4 @@
 import Hero from "./component/hero";
-import Services from "./component/Services";
 
 export default function Home() {
   return (
