@@ -7,11 +7,11 @@ export default function Hero() {
       {/* Text and Button Div */}
       <div className="flex items-center justify-center w-full md:w-1/2 h-full text-white p-8">
         <div className="text-center md:text-left space-y-6">
-          <div className="bg-[#2A2A2A] text-white p-1 border-1 border-gray-700  mx-auto mt-2">
-            <h1 className="text-2xl font-bold text-center mb-4">
+          <div className="bg-[#2A2A2A] text-white rounded-lg p-3 border-1 border-gray-700  mx-auto mt-2">
+            <h1 className="text-2xl font-bold text-center mb-4 px-2">
               IQRA International Education Consultancy
             </h1>
-            <p className="text-md mb-4">
+            <p className="text-md mb-4 px-2">
               ...provides step-by-step guidance from application to enrolment to
               make dreams of higher study abroad a reality for genuine students.
               Book your{" "}
@@ -21,7 +21,7 @@ export default function Hero() {
               with us now to find out why more than five thousand students
               consider us the best education consultancy in Bangladesh.
             </p>
-            <p className="text-md">
+            <p className="text-md px-2">
               Our team of expert counselors is happy to assist you with the
               following services without{" "}
               <span className="font-bold text-yellow-400">ANY FEES </span>
