@@ -13,10 +13,12 @@ export default function Header() {
   const toggleNav = () => setIsNavVisible(!isNavVisible);
 
   const isActive = (path) =>
-    pathname === path ? "text-white bg-primary" : "text-gray-400";
+    pathname === path
+      ? "border-2 border-gray-600 text-gray-600" // Active link: gray border and text
+      : "border border-white text-white"; // Inactive link: white border and text
 
   return (
-    <header className="bg-black fixed top-0 left-0 w-full z-50 p-4 shadow-lg  lg:px-48 md:px-48">
+    <header className="bg-black fixed top-0 left-0 w-full z-50 p-4 shadow-lg lg:px-48 md:px-48">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -32,21 +34,37 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-2">
-          <Link href="/" className={`px-4 py-2 rounded ${isActive("/")}`}>
-          Home
+        <nav className="hidden md:flex space-x-4">
+          <Link
+            href="/"
+            className={`px-6 py-2 rounded-md border-2 ${isActive("/")}`}
+          >
+            Home
           </Link>
-          <Link href="/service" className={`px-4 py-2 rounded ${isActive("/service")}`}>
+          <Link
+            href="/service"
+            className={`px-6 py-2 rounded-md border-2 ${isActive("/service")}`}
+          >
             Service
           </Link>
-          <Link href="/studyabroad" className={`px-4 py-2 rounded ${isActive("/studyabroad")}`}>
-          study Abroad
+          <Link
+            href="/studyabroad"
+            className={`px-6 py-2 rounded-md border-2 ${isActive("/studyabroad")}`}
+          >
+            Study Abroad
           </Link>
           <Link
             href="/contact"
-            className={`px-4 py-2 rounded ${isActive("/contact")}`}
+            className={`px-6 py-2 rounded-md border-2 ${isActive("/contact")}`}
           >
             Contact
+          </Link>
+          {/* Visit Abroad Link */}
+          <Link
+            href="/visit"
+            className={`px-6 py-2 rounded-md border-2 ${isActive("/visit")}`}
+          >
+            Visit Abroad
           </Link>
         </nav>
 
@@ -58,9 +76,9 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Drawer Navigation */}
+      {/* Drawer Navigation for Mobile */}
       <div
-        className={`fixed top-0 right-0 h-full w-3/4 bg-black text-white shadow-lg transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-7/3 bg-black text-white shadow-lg transform transition-transform duration-300 ${
           isNavVisible ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -69,34 +87,42 @@ export default function Header() {
             <IoClose size={30} />
           </button>
         </div>
-        <nav className="mt-4 space-y-4">
+        <nav className="mt-4 space-y-4 mx-4">
           <Link
             href="/"
-            className={`block px-4 py-2 rounded ${isActive("/")}`}
+            className={`block px-10 py-2 rounded-md border-2 ${isActive("/")}`}
             onClick={toggleNav}
           >
             Home
           </Link>
           <Link
             href="/service"
-            className={`block px-4 py-2 rounded ${isActive("/service")}`}
+            className={`block px-10 py-2 rounded-md border-2 ${isActive("/service")}`}
             onClick={toggleNav}
           >
             Service
           </Link>
           <Link
-            href="/about"
-            className={`block px-4 py-2 rounded ${isActive("/studyabroad")}`}
+            href="/studyabroad"
+            className={`block px-10 py-2 rounded-md border-2 ${isActive("/studyabroad")}`}
             onClick={toggleNav}
           >
             Study Abroad
           </Link>
           <Link
             href="/contact"
-            className={`block px-4 py-2 rounded ${isActive("/contact")}`}
+            className={`block px-10 py-2 rounded-md border-2 ${isActive("/contact")}`}
             onClick={toggleNav}
           >
             Contact
+          </Link>
+          {/* Visit Abroad Link in Mobile */}
+          <Link
+            href="/visit"
+            className={`block px-10 py-2 rounded-md border-2 ${isActive("/visit")}`}
+            onClick={toggleNav}
+          >
+            Visit Abroad
           </Link>
         </nav>
       </div>
