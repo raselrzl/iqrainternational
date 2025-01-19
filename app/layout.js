@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./component/header";
 import { Footer } from "./component/footer";
+import Head from "next/head";  // Import Head from next/head
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,11 +25,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Add the favicon link here */}
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        
         <Header />
         {children}
-        <Footer />
       </body>
-      
     </html>
   );
 }

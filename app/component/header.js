@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { Footer } from "./footer";
 
 export default function Header() {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -18,7 +19,7 @@ export default function Header() {
       : "border border-white text-white"; // Inactive link: white border and text
 
   return (
-    <header className="bg-black fixed top-0 left-0 w-full z-50 p-4 shadow-lg lg:px-48 md:px-48">
+    <header className="bg-black fixed top-0 left-0 w-full z-50 p-2 shadow-lg lg:px-48 md:px-48">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -32,6 +33,7 @@ export default function Header() {
             />
           </Link>
         </div>
+        <Footer />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-4">

@@ -6,7 +6,8 @@ import { FaSquareFacebook } from "react-icons/fa6";
 export function Footer() {
   return (
     <>
-      <div className="fixed bottom-0 left-0 flex w-full justify-center gap-4 p-6 text-3xl bg-black">
+      <div className="flex justify-center gap-4 p-6 text-2xl bg-black mr-10 md:text-2xl lg:text-3xl lg:mr-20">
+
         <Link
           href=""
           target="_blank"
@@ -18,9 +19,9 @@ export function Footer() {
         <Link href="tel:+46000000">
           <MdAddCall className="hover:text-[#444444]" />
         </Link>
-        <Link href="mailto:i@g.com">
+      {/*   <Link href="mailto:i@g.com">
           <MdMarkEmailUnread className="hover:text-[#444444]" />
-        </Link>
+        </Link> */}
         <Link
           href=""
           target="_blank"
