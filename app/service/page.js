@@ -83,7 +83,7 @@ export default function Services() {
       
 
       <div className="md:w-[60%] mx-auto h-auto mt-[100px] px-6">
-      <h1 className="text-center text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+      <h1 className="text-center text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 py-6">
         "Your future is in trusted hands—with full transparency, complete
         access, and unwavering support, we make your dreams into a
         reality."
