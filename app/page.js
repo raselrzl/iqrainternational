@@ -9,9 +9,7 @@ export default function Home() {
         <ImageSlider />
         <Hero />
         <ImageSequence />
-        <h1 className="text-center text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 py-6">
-  <span className="block sm:text-white">"Your Success is our only Mission"</span>
-</h1>
+      
 
       </div>
     </div>
