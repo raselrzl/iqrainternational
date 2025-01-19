@@ -2,23 +2,23 @@
 import Link from 'next/link';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 
-export default function Study() {
+export default function Visit() {
   const countries = [
-    {
+   /*  {
       country: 'Sweden',
-      image: 'swedenCity.jpg',
+      image: 'sweden1.png',
       destination: 'Study in Sweden',
-    },
-    /* {
+    }, */
+    {
       country: 'Australia',
-      image: 'australia1.webp',
+      image: 'australiaCity.jpg',
       destination: 'Visit in Australia',
     },
     {
       country: 'Canada',
-      image: 'canada.jpg',
+      image: 'canadaCity.webp',
       destination: 'Visit in Canada',
-    }, */
+    },
   ];
 
   return (
@@ -35,7 +35,7 @@ export default function Study() {
 
             {/* Link to country page */}
             <div className="w-full text-center rounded-b-lg text-white font-extrabold text-xl py-2 flex items-center justify-center gap-2">
-              {item.destination}
+              {item.destination} 
               <FaArrowAltCircleRight />
             </div>
           </div>
