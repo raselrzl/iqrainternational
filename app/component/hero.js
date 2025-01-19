@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="flex items-center justify-center w-full md:w-1/2 h-full text-white p-8">
         <div className="text-center md:text-left space-y-6">
           <div className="bg-[#2A2A2A] text-white rounded-lg p-3 border-1 border-gray-700  mx-auto mt-2">
-            <h1 className="text-2xl font-bold text-center mb-4 px-2">
+            <h1 className="text-2xl font-extrabold text-center mb-4 px-2">
               IQRA International Education Consultancy
             </h1>
             <p className="text-md mb-4 px-2">

@@ -38,6 +38,9 @@ export default function Header() {
         <div className="hidden lg:block">
           <Footer />
         </div>
+        {/* <h1 className="text-center text-xs md:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 py-1">
+          "Your success is our only mission"
+        </h1> */}
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-4">
