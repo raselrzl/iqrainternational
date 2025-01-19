@@ -40,15 +40,15 @@ const ImageSequence = () => {
   ];
 
   return (
-    <><div className="text-2xl sm:text-2xl md:text-3xl font-extrabold mb-2 tracking-wide text-center mt-1 py-2 px-8 ">
+    <><div className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide text-center mt-1 py-1 px-10 ">
     Step by Step Guide to Your Success
         </div>
-    <div className="bg-black py-10 px-4 mb-28 flex flex-wrap justify-center gap-10">
+    <div className="bg-black py-10 px-4 mb-24 flex flex-wrap justify-center gap-5">
         
       {steps.map((step, index) => (
         <div
           key={index}
-          className="flex flex-row items-center bg-[#2A2A2A] rounded-lg shadow-lg p-6 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-6"
+          className="flex flex-row items-center bg-[#2A2A2A] shadow-lg p-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 "
         >
           {/* Image on the Left */}
           <div className="relative mr-6">
@@ -64,7 +64,7 @@ const ImageSequence = () => {
           {/* Step Title and Description on the Right */}
           <div className="flex flex-col justify-center text-white text-left w-full">
             {/* Step Title */}
-            <div className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-2 tracking-wide">
+            <div className="text-lg sm:text-2xl md:text-3xl font-extrabold mb-2 tracking-wide">
               {step.title}
             </div>
 
