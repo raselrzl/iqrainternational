@@ -7,8 +7,8 @@ export default function Hero() {
       {/* Text and Button Div */}
       <div className="flex items-center justify-center w-full md:w-1/2 h-full text-white p-8">
         <div className="text-center md:text-left space-y-6">
-          <div className="bg-[#2A2A2A] text-white p-6 rounded-lg border-2 border-gray-700 max-w-4xl mx-auto mt-12">
-            <h1 className="text-3xl font-bold text-center mb-4">
+          <div className="bg-[#2A2A2A] text-white p-1 border-1 border-gray-700  mx-auto mt-2">
+            <h1 className="text-2xl font-bold text-center mb-4">
               IQRA International Education Consultancy
             </h1>
             <p className="text-md mb-4">
@@ -24,12 +24,12 @@ export default function Hero() {
             <p className="text-md">
               Our team of expert counselors is happy to assist you with the
               following services without{" "}
-              <span className="font-bold text-yellow-400">ANY FEES</span>
-              when you apply to our partner universities.
+              <span className="font-bold text-yellow-400">ANY FEES </span>
+               when you apply to our partner universities.
             </p>
           </div>
 
-          <button className="px-6 py-3 bg-gradient-to-r from-gray-800 to-green-300 text-white font-semibold rounded-lg shadow-md hover:from-purple-200 hover:to-blue-300 hover:shadow-lg transform hover:scale-105 transition-all duration-600 ease-in-out uppercase">
+          <button className="px-6 py-3 bg-gradient-to-r from-gray-800 to-red-300 text-white font-semibold rounded-lg shadow-md hover:from-purple-200 hover:to-blue-300 hover:shadow-lg transform hover:scale-105 transition-all duration-600 ease-in-out uppercase">
             Get Started
           </button>
         </div>
