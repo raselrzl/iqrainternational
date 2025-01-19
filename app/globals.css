@@ -37,3 +37,9 @@ body {
     39% 35%
   );
 }
+
+@supports (background-clip: text) {
+  .bg-clip-text {
+    background-clip: text;
+  }
+}

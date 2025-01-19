@@ -14,4 +14,12 @@ export default {
     },
   },
   plugins: [],
+  safelist: [
+    'bg-clip-text', // Safelist bg-clip-text class to avoid purging
+    'text-transparent', // Safelist text-transparent class to avoid purging
+    'bg-gradient-to-r', // Safelist gradient utility to avoid purging
+    'from-blue-400', // Safelist specific gradient color classes
+    'via-purple-500',
+    'to-pink-500',
+  ],
 };
