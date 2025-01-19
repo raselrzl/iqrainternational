@@ -48,7 +48,7 @@ const ImageSequence = () => {
       {steps.map((step, index) => (
         <div
           key={index}
-          className="flex flex-row items-center bg-gray-800 rounded-lg shadow-lg p-6 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-6"
+          className="flex flex-row items-center bg-[#2A2A2A] rounded-lg shadow-lg p-6 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-6"
         >
           {/* Image on the Left */}
           <div className="relative mr-6">

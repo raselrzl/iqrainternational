@@ -116,16 +116,18 @@ export default function ContactPage() {
   return (
     <>
       <div className="min-h-screen">
-        <div className="mx-auto my-6 max-w-screen-lg bg-black p-8 text-sm  text-white shadow-2xl">
-          <div className="mx-auto mt-20 my-6 max-w-screen-lg bg-[#d8d7d5] p-4 text-sm uppercase text-black shadow-2xl">
-            <form onSubmit={handleSubmit} className="space-y-2">
+        <div className="mx-auto my-6 max-w-screen-lg px-2 py-8 text-sm shadow-2xl">
+           
+          <div className="mx-auto mt-20 my-6 max-w-screen-lg bg-[#2A2A2A] p-4 text-sm uppercase  shadow-2xl rounded-md">
+          <h1  className="text-white m-5 text-xl font-semibold text-center" >Book A Schedule</h1>
+            <form onSubmit={handleSubmit} className="space-y-4 mx-2">
               <>
                 {/* Full Name and Phone Number in one row for larger screens */}
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-bold text-black"
+                      className="block text-sm font-bold text-white"
                     >
                       Full Name
                     </label>
@@ -144,7 +146,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="phoneNumber"
-                      className="block text-sm font-bold text-black"
+                      className="block text-sm font-bold text-white"
                     >
                       Phone Number
                     </label>
@@ -169,7 +171,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-bold text-black"
+                      className="block text-sm font-bold text-white"
                     >
                       Email
                     </label>
@@ -190,7 +192,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="personnummer"
-                      className="block text-sm font-bold text-black"
+                      className="block text-sm font-bold text-white"
                     >
                       Date of Birth
                     </label>
@@ -218,7 +220,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="date"
-                      className="block text-sm font-bold text-black"
+                      className="block text-sm font-bold text-white"
                     >
                       Date of Booking
                     </label>
@@ -237,7 +239,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="time"
-                      className="block text-sm font-bold text-black"
+                      className="block text-sm font-bold text-white"
                     >
                       Time
                     </label>
@@ -262,7 +264,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="numPeople"
-                      className="block text-sm font-bold text-black"
+                      className="block text-sm font-bold text-white"
                     >
                       IELTS Score
                     </label>
@@ -288,7 +290,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-bold text-black"
+                    className="block text-sm font-bold text-white"
                   >
                     Message
                   </label>
@@ -312,7 +314,7 @@ export default function ContactPage() {
                   type="submit"
                   className={`w-full px-4 py-2 ${
                     showConfirmation ? "bg-black" : "bg-black"
-                  } text-[#EAC6B5] rounded-sm shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`}
+                  } text-white rounded-sm shadow-sm font-extrabold uppercase hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`}
                 >
                   Confirm
                 </button>
