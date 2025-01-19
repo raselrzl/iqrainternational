@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col md:flex-row md:w-[60%] mx-auto h-auto md:h-[60vh] mt-[100px] md:mt-[100px] bg-black">
+    <section className="flex flex-col md:flex-row md:w-[60%] mx-auto h-auto md:h-[60vh] md:mt-[100px] bg-black">
       {/* Text and Button Div */}
       <div className="flex items-center justify-center w-full md:w-1/2 h-full text-white p-8">
         <div className="text-center md:text-left space-y-6">
