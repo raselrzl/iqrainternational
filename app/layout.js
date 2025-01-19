@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./component/header";
 import { Footer } from "./component/footer";
 import Head from "next/head";  // Import Head from next/head
+import { Flag } from "./component/flag";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         
         <Header />
         {children}
+        <Flag />
       </body>
     </html>
   );

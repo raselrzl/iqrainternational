@@ -33,7 +33,11 @@ export default function Header() {
             />
           </Link>
         </div>
-        <Footer />
+
+        {/* Footer for larger screens only */}
+        <div className="hidden lg:block">
+          <Footer />
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-4">
@@ -111,13 +115,6 @@ export default function Header() {
           >
             Study Abroad
           </Link>
-          <Link
-            href="/contact"
-            className={`block px-10 py-2 rounded-md border-2 ${isActive("/contact")}`}
-            onClick={toggleNav}
-          >
-            Contact
-          </Link>
           {/* Visit Abroad Link in Mobile */}
           <Link
             href="/visit"
@@ -126,6 +123,16 @@ export default function Header() {
           >
             Visit Abroad
           </Link>
+          <Link
+            href="/contact"
+            className={`block px-10 py-2 rounded-md border-2 ${isActive("/contact")}`}
+            onClick={toggleNav}
+          >
+            Contact
+          </Link>
+          <div className="ml-4 pt-10">
+          <Footer />
+          </div>
         </nav>
       </div>
     </header>
