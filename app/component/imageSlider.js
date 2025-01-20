@@ -2,25 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 
-export default function ImageSlider() {
-  const slides = [
-    {
-      url: 'services/e1.jpg',
-    },
-    {
-      url: 'services/e2.jpg',
-    },
-    {
-      url: 'services/e3.webp',
-    },
-
-    {
-      url: 'services/e4.jpeg',
-    },
-    {
-      url: 'services/e5.jpg',
-    },
-  ];
+export default function ImageSlider({slides}) {
+ 
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -49,7 +32,7 @@ export default function ImageSlider() {
   }, [currentIndex]);
 
   return (
-    <div className='relative max-w-[1000px] max-h-[600px] w-full mx-auto py-8 px-1/2 group'>
+    <div className='relative max-w-[1000px] max-h-[600px] w-full mx-auto pt-8 px-1/2 group'>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className='w-full h-[40vh] md:h-[50vh] lg:h-[55vh] xl:h-[60vh] bg-center bg-cover bg-no-repeat duration-500'

@@ -114,12 +114,24 @@ export default function ContactPage() {
   function padZero(num) {
     return num < 10 ? `0${num}` : `${num}`;
   }
+  const slides = [
+    { url: "swe.webp" },
+    { url: "australiaCity.jpg" },
+    { url: "canadaCity.webp" },
+    { url: "usa.jpg" },
+    { url: "uk.jpeg" },
+    { url: "mal.jpg" },
+    { url: "singapur.jpg" },
+    { url: "india.jpg" },
+    { url: "thai.jpeg" },
+  ];
+
   return (
     <>
       <div className="min-h-screen">
         <div className="mx-auto my-6 max-w-screen-lg px-2 py-8 text-sm shadow-2xl">
-           <ImageSlider />
-          <div className="mx-auto mt-20 my-6 max-w-screen-lg bg-[#2A2A2A] p-4 text-sm uppercase  shadow-2xl rounded-md">
+           <ImageSlider slides={slides}/>
+          <div className="mx-auto mb-6 max-w-screen-lg bg-[#2A2A2A] p-8 text-sm uppercase  shadow-2xl rounded-md">
           <h1  className="text-white m-5 text-xl font-semibold text-center" >Book A Schedule</h1>
             <form onSubmit={handleSubmit} className="space-y-4 mx-2">
               <>
