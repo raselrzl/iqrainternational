@@ -1,6 +1,7 @@
 "use client";
 import Link from 'next/link';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
+import Sweden from '../component/sweden';
 
 export default function Study() {
   const countries = [
@@ -22,15 +23,16 @@ export default function Study() {
   ];
 
   return (
+    <div>
     <div className="bg-black py-10 lg:px-8 lg:mx-20 flex flex-wrap justify-center gap-5 mt-20">
       {countries.map((item) => (
         <Link key={item.country} href={`/${item.country.toLowerCase()}`} passHref>
-          <div className="flex flex-col items-center bg-[#2A2A2A] rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition w-[300px] h-auto">
+          <div className="flex flex-col items-center bg-[#2A2A2A] shadow-lg cursor-pointer hover:shadow-xl transition w-[300px] h-auto">
             {/* Image */}
             <img
               src={item.image}
               alt={item.destination}
-              className="w-full h-48 object-cover rounded-t-lg"
+              className="w-full h-48 object-cover"
             />
 
             {/* Link to country page */}
@@ -41,6 +43,8 @@ export default function Study() {
           </div>
         </Link>
       ))}
+      
     </div>
+    <Sweden /></div>
   );
 }
