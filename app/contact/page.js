@@ -369,7 +369,7 @@ export default function ContactPage() {
         </div>
         <div className="text-center">
           <h1 className="text-white m-5 text-xl font-semibold">
-            Meet Our Specialist
+          Meet Our Specialists
           </h1>
           <hr className="border-t-2 border-gray-300 mx-auto w-1/2" />
         </div>
