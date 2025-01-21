@@ -63,12 +63,8 @@ export default function Visit() {
 
       <div className="bg-black py-10 lg:px-8 lg:mx-20 flex flex-wrap justify-center gap-5  max-w-[1200px]">
         {countries.map((item) => (
-          <Link
-            key={item.country}
-            href={`/${item.country.toLowerCase()}`}
-            passHref
-          >
-            <div className="flex flex-col items-center bg-[#2A2A2A] shadow-lg cursor-pointer hover:shadow-xl transition w-[300px] h-auto ">
+          
+            <div key={item.country} className="flex flex-col items-center bg-[#2A2A2A] shadow-lg cursor-pointer hover:shadow-xl transition w-[300px] h-auto ">
               {/* Image */}
               <img
                 src={item.image}
@@ -82,7 +78,7 @@ export default function Visit() {
                 <FaArrowAltCircleRight />
               </div>
             </div>
-          </Link>
+         
         ))}
       </div>
     </div>
