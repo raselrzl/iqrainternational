@@ -1,17 +1,18 @@
 "use client";
 import { useState } from "react";
 import ImageSlider from "../component/imageSlider";
+import { BASE_API_URL } from "../lib/utils";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    personnummer: "",
+    dateofbirth: "",
     message: "",
     phoneNumber: "",
     date: "",
     time: "",
-    numPeople: "",
+    ielts: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -33,10 +34,10 @@ export default function ContactPage() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       formErrors.email = "Email address is invalid";
     }
-    if (!formData.personnummer) {
-      formErrors.personnummer = "Date of Birth is required";
-    } else if (!/^\d{10}$|^\d{12}$/.test(formData.personnummer)) {
-      formErrors.personnummer =
+    if (!formData.dateofbirth) {
+      formErrors.dateofbirth = "Date of Birth is required";
+    } else if (!/^\d{6}$|^\d{8}$/.test(formData.dateofbirth)) {
+      formErrors.dateofbirth =
         "Date of Birth must be in the format YYMMDD or YYYYMMDD";
     }
     if (!formData.phoneNumber)
@@ -44,8 +45,8 @@ export default function ContactPage() {
     if (!formData.message) formErrors.message = "Message is required";
     if (!formData.time) formErrors.time = "Time is required";
     if (!formData.date) formErrors.date = "Date is required";
-    if (!formData.numPeople)
-      formErrors.numPeople = "Score is required";
+    if (!formData.ielts)
+      formErrors.ielts = "Score is required";
     return formErrors;
   };
 
@@ -77,8 +78,8 @@ export default function ContactPage() {
             phoneNumber: "",
             date: "",
             time: "",
-            numPeople: "",
-            personnummer: "",
+            ielts: "",
+            dateofbirth: "",
           });
         } else {
           console.log("Failed to submit form");
@@ -90,14 +91,14 @@ export default function ContactPage() {
       setErrors(formErrors);
     }
   };
-/*   if (!BASE_API_URL) {
+  if (!BASE_API_URL) {
     return null;
-  } */
+  }
 
   function generateTimeOptions() {
     const options = [];
-    const start = 15; // 3 PM
-    const end = 21; // 11 PM
+    const start = 10; // 10 am
+    const end = 16; // 5 PM
 
     // Generate time options with 15-minute intervals
     for (let hour = start; hour <= end; hour++) {
@@ -204,25 +205,25 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label
-                      htmlFor="personnummer"
+                      htmlFor="dateofbirth"
                       className="block text-sm font-bold text-white"
                     >
                       Date of Birth
                     </label>
                     <input
                       type="text"
-                      name="personnummer"
-                      id="personnummer"
-                      value={formData.personnummer || ""}
+                      name="dateofbirth"
+                      id="dateofbirth"
+                      value={formData.dateofbirth || ""}
                       onChange={handleChange}
                       maxLength={8} // Maximum length for the full format (YYYYMMDDXXXX)
                       pattern="\d{6}|\d{8}" // Ensures input is 10 or 12 digits
                       placeholder="YYYYMMDD"
                       className="mt-1 block w-full h-8 rounded-sm border-gray-300 p-2 text-black shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                     />
-                    {errors.personnummer && (
+                    {errors.dateofbirth && (
                       <p className="mt-1 text-xs text-red-500">
-                        {errors.personnummer}
+                        {errors.dateofbirth}
                       </p>
                     )}
                   </div>
@@ -276,22 +277,22 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label
-                      htmlFor="numPeople"
+                      htmlFor="ielts"
                       className="block text-sm font-bold text-white"
                     >
                       IELTS Score
                     </label>
                     <input
                       type="number"
-                      name="numPeople"
-                      id="numPeople"
-                      value={formData.numPeople || ""}
+                      name="ielts"
+                      id="ielts"
+                      value={formData.ielts || ""}
                       onChange={handleChange}
                       className="mt-1 block w-full h-8 rounded-sm border-gray-300 p-2 text-black shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                       min="0"
                       placeholder="Don't have: Enter 0"
                     />
-                    {formData.numPeople > 8 && (
+                    {formData.ielts > 8 && (
                       <p className="mt-1 text-xs text-red-500">
                         Something Wrong
                       </p>
@@ -334,9 +335,9 @@ export default function ContactPage() {
               </div>
             </form>
             {showConfirmation && (
-              <div className="mx-auto my-6 max-w-screen-lg bg-[#f8d8c9] p-8 text-center text-sm uppercase text-black shadow-2xl">
+              <div className="mx-auto my-6 max-w-screen-lg bg-white p-8 text-center text-sm uppercase text-black shadow-2xl">
                 <p className="my-6 mb-6 text-center text-sm uppercase text-black">
-                  Thank You for your Booking! <br /> <br /> One of our representative will contact you as soon as possible.
+                  Thank You for your Booking! {formData.name}<br /> <br /> One of our representative will contact you as soon as possible.
                 </p>
               </div>
             )}
