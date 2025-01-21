@@ -14,7 +14,7 @@ export function Flag() {
   ];
 
   return (
-    <div className="bg-black py-6 text-white">
+    <div className="bg-black pb-6 text-white">
       {/* Heading with Logo */}
       <div className="flex items-center uppercase justify-center gap-1 mb-2 ">
         {/* <p className="text-md font-semibold">Study&Visit with </p> */}
