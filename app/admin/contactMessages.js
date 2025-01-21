@@ -115,18 +115,18 @@ export default function ContactMessages() {
   if (loading) return <LoadingSpinner />;
 
   return (
-    <div className="my-10 mb-40 px-8">
-      <div className="mb-10 flex justify-center">
-        <h1 className="text-xl font-semibold text-white bg-black px-8 py-2 rounded-md">
+    <div className="my-2 mb-20 px-2">
+      <div className="mb-2 flex justify-center">
+        <h1 className="text-xl font-semibold text-white">
           All Bookings
         </h1>
       </div>
-      <div>
+      <div className="bg-black py-2 lg:px-8 lg:mx-20  flex flex-wrap justify-center gap-2">
         {messages.length > 0 ? (
           messages.map((msg) => (
             <div
               key={msg._id}
-              className={`mx-auto mb-6 max-w-xl rounded-lg p-6 shadow-xl ${
+              className={`mx-auto mb-2 max-w-xl p-2 shadow-xl ${
                 msg.confirmed
                   ? "bg-green-100"
                   : msg.cancelled
@@ -141,17 +141,17 @@ export default function ContactMessages() {
                     <AiOutlineMail className="text-gray-600" /> {msg.email}
                   </a>
                 </div>
-                <p className="text-md mt-2 font-medium text-gray-800">{msg.dateofbirth}</p>
+                <p className="text-sm mt-2 font-medium text-gray-800">DoB:{msg.dateofbirth}</p>
               </div>
 
-              <div className="mb-4 rounded-lg bg-gray-50 p-4">
+              <div className="mb-2 rounded-lg bg-gray-50 p-2">
                 <p className="text-sm text-gray-700">
                   <strong>Message:</strong> {msg.message}
                 </p>
               </div>
 
-              <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div className="rounded-lg bg-gray-50 p-4 flex items-center gap-2">
+              <div className="mb-2 grid grid-cols-2 gap-2 sm:grid-cols-2">
+                <div className="rounded-lg bg-gray-50 px-2 flex items-center gap-2">
                   <AiOutlinePhone className="text-blue-500" />
                   <a
                     href={`tel:${msg.phoneNumber}`}
@@ -161,28 +161,32 @@ export default function ContactMessages() {
                   </a>
                 </div>
 
-                <div className="rounded-lg bg-gray-50 p-4">
+                <div className="rounded-lg bg-gray-50 p-2">
                   <p className="text-sm text-gray-700">
                     <strong>Date:</strong> {msg.date}
                   </p>
                 </div>
               </div>
-
-              <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div className="rounded-lg bg-gray-50 p-4">
-                  <p className="text-sm text-gray-700">
+              <div className="mb-2 grid grid-cols-2 gap-2 sm:grid-cols-2">
+                <div className="rounded-lg bg-gray-50 px-2 flex items-center gap-2">
+                  <p
+                    
+                    className="text-sm text-gray-700 hover:underline"
+                  >
                     <strong>Time:</strong> {msg.time}
                   </p>
                 </div>
 
-                <div className="rounded-lg bg-gray-50 p-4">
+                <div className="rounded-lg bg-gray-50 p-2">
                   <p className="text-sm text-gray-700">
-                    <strong>IELTS Score:</strong> {msg.ielts}
+                  <strong>IELTS:</strong> {msg.ielts}
                   </p>
                 </div>
               </div>
 
-              <div className="mt-4 flex items-center justify-between">
+              
+
+              <div className="flex items-center justify-between">
 
               {/* <button
                   onClick={() => deleteMessage(msg._id)}
@@ -195,22 +199,22 @@ export default function ContactMessages() {
                 ) : msg.cancelled ? (
                   <span className="text-red-600 font-semibold">Cancelled</span>
                 ) : (
-                  <div className="flex gap-2">
+                  <div className="flex gap-1">
                     <button
                       onClick={() => updateBookingStatus(msg._id, "confirm")}
-                      className="rounded-md bg-blue-500 px-4 py-1 text-white hover:bg-blue-600"
+                      className="rounded-md bg-blue-500 px-2 py-1 text-white hover:bg-blue-600"
                     >
                       Confirm
                     </button>
                     <button
                       onClick={() => updateBookingStatus(msg._id, "cancel")}
-                      className="rounded-md bg-red-500 px-4 py-1 text-white hover:bg-red-600"
+                      className="rounded-md bg-red-500 px-2 py-1 text-white hover:bg-red-600"
                     >
                       Cancel
                     </button>
                   </div>
                 )}
-                <span className="text-xs mt-20 text-gray-500">
+                <span className="text-xs mt-10 text-gray-500">
                   {new Date(msg.createdAt).toLocaleString()}
                 </span>
               </div>
