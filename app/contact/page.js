@@ -2,7 +2,6 @@
 import { useState } from "react";
 import ImageSlider from "../component/imageSlider";
 import { BASE_API_URL } from "../lib/utils";
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -45,11 +44,32 @@ export default function ContactPage() {
     if (!formData.message) formErrors.message = "Message is required";
     if (!formData.time) formErrors.time = "Time is required";
     if (!formData.date) formErrors.date = "Date is required";
-    if (!formData.ielts)
-      formErrors.ielts = "Score is required";
+    if (!formData.ielts) formErrors.ielts = "Score is required";
     return formErrors;
   };
-
+  const teamMembers = [
+    {
+      name: "John Doe",
+      email: "john.doe@example.com",
+      phone: "+1234567890",
+      address: "123 Main St, City, Country",
+      rank: "CEO",
+    },
+    {
+      name: "Jane Smith",
+      email: "jane.smith@example.com",
+      phone: "+0987654321",
+      address: "456 Elm St, City, Country",
+      rank: "IT Specialist",
+    },
+    {
+      name: "Alice Johnson",
+      email: "alice.johnson@example.com",
+      phone: "+1122334455",
+      address: "789 Oak St, City, Country",
+      rank: "Marketing Manager",
+    },
+  ];
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formErrors = validateForm();
@@ -131,9 +151,11 @@ export default function ContactPage() {
     <>
       <div className="min-h-screen">
         <div className="mx-auto my-6 max-w-screen-lg px-2 py-8 text-sm shadow-2xl">
-           <ImageSlider slides={slides}/>
+          <ImageSlider slides={slides} />
           <div className="mx-auto mb-6 max-w-screen-lg bg-[#2A2A2A] p-8 text-sm uppercase  shadow-2xl rounded-md">
-          <h1  className="text-white m-5 text-xl font-semibold text-center" >Book A Schedule</h1>
+            <h1 className="text-white m-5 text-xl font-semibold text-center">
+              Book A Schedule
+            </h1>
             <form onSubmit={handleSubmit} className="space-y-4 mx-2">
               <>
                 {/* Full Name and Phone Number in one row for larger screens */}
@@ -337,11 +359,51 @@ export default function ContactPage() {
             {showConfirmation && (
               <div className="mx-auto my-6 max-w-screen-lg bg-white p-8 text-center text-sm uppercase text-black shadow-2xl">
                 <p className="my-6 mb-6 text-center text-sm uppercase text-black">
-                  Thank You for your Booking! {formData.name}<br /> <br /> One of our representative will contact you as soon as possible.
+                  Thank You for your Booking! {formData.name}
+                  <br /> <br /> One of our representative will contact you as
+                  soon as possible.
                 </p>
               </div>
             )}
           </div>
+        </div>
+        <div className="text-center">
+          <h1 className="text-white m-5 text-xl font-semibold">
+            Meet Our Specialist
+          </h1>
+          <hr className="border-t-2 border-gray-300 mx-auto w-1/2" />
+        </div>
+        <div className="flex flex-wrap justify-center gap-1 p-2 lg:px-56 px-10">
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-1 bg-[#2A2A2A] rounded-lg"
+            >
+              <div
+                className="bg-cover bg-center p-4 rounded-md shadow-lg"
+                style={{ backgroundImage: `url(${member.backgroundImage})` }}
+              >
+                <h3 className="text-xl font-semibold text-center text-white">
+                  {member.name}
+                </h3>
+                <div className="flex items-center justify-center space-x-2">
+                  <i className={`text-white ${member.iconClass}`}></i>
+                  <p className="text-center text-white">{member.rank}</p>
+                </div>
+                <div className="mt-4">
+                  <p className="text-sm text-white">
+                    <strong>Email:</strong> {member.email}
+                  </p>
+                  <p className="text-sm text-white">
+                    <strong>Phone:</strong> {member.phone}
+                  </p>
+                  <p className="text-sm text-white">
+                    <strong>Address:</strong> {member.address}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>

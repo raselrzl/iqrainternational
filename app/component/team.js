@@ -1,7 +1,4 @@
-// components/VisitingCards.js
-import React from 'react';
-
-export default function Employees(){
+const Team = () => {
   const teamMembers = [
     {
       name: 'John Doe',
@@ -53,5 +50,6 @@ export default function Employees(){
     </div>
   );
 };
+export default Team;
 
 
