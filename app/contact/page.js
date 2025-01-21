@@ -152,7 +152,7 @@ export default function ContactPage() {
       <div className="min-h-screen">
         <div className="mx-auto my-6 max-w-screen-lg px-2 py-8 text-sm shadow-2xl">
           <ImageSlider slides={slides} />
-          <div className="mx-auto mb-6 max-w-screen-lg bg-[#2A2A2A] p-8 text-sm uppercase  shadow-2xl rounded-md">
+          <div  className="mx-auto mb-6 max-w-screen-lg bg-[#2A2A2A] p-8 text-sm uppercase  shadow-2xl rounded-md">
             <h1 className="text-white m-5 text-xl font-semibold text-center">
               Book A Schedule
             </h1>

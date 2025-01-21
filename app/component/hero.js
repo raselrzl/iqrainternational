@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Hero() {
   return (
     <section className="flex flex-col md:flex-row md:w-[60%] mx-auto h-auto md:h-[60vh] md:mt-[100px] bg-black">
@@ -25,13 +25,18 @@ export default function Hero() {
               Our team of expert counselors is happy to assist you with the
               following services without{" "}
               <span className="font-bold text-yellow-400">ANY FEES </span>
-               when you apply to our partner universities.
+              when you apply to our partner universities.
             </p>
           </div>
 
-          <button className="px-6 py-3 bg-gradient-to-r from-gray-800 to-red-300 text-white font-semibold rounded-lg shadow-md hover:from-purple-200 hover:to-blue-300 hover:shadow-lg transform hover:scale-105 transition-all duration-600 ease-in-out uppercase">
+          <div className="mt-2">
+          <Link
+            href="/contact"
+            className="px-6 py-3 bg-gradient-to-r from-gray-800 to-red-300 text-white font-semibold rounded-lg shadow-md hover:from-purple-200 hover:to-blue-300 hover:shadow-lg transform hover:scale-105 transition-all duration-600 ease-in-out uppercase"
+          >
             Get Started
-          </button>
+          </Link>
+          </div>
         </div>
       </div>
 
