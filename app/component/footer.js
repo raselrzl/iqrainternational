@@ -16,12 +16,12 @@ export function Footer() {
           <FaInstagramSquare className="hover:text-[#444444]" />
         </Link>
 
-        <Link href="tel:+46000000">
+        <Link href="tel:01571311765">
           <MdAddCall className="hover:text-[#444444]" />
         </Link>
-      {/*   <Link href="mailto:i@g.com">
+        <Link href="mailto:info@giqrainternational.online">
           <MdMarkEmailUnread className="hover:text-[#444444]" />
-        </Link> */}
+        </Link>
         <Link
           href=""
           target="_blank"

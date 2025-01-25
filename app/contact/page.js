@@ -49,25 +49,25 @@ export default function ContactPage() {
   };
   const teamMembers = [
     {
-      name: "John Doe",
-      email: "john.doe@example.com",
-      phone: "+1234567890",
-      address: "123 Main St, City, Country",
-      rank: "CEO",
+      name: "Md Abdul Muhit",
+      email: "rasel@iqrainternational.online",
+      phone: "+8801571311765",
+      address: "Shah Mustofa Road, Moulovibazar",
+      rank: "CEO & Education Consultant",
     },
     {
-      name: "Jane Smith",
-      email: "jane.smith@example.com",
-      phone: "+0987654321",
-      address: "456 Elm St, City, Country",
-      rank: "IT Specialist",
+      name: "Shahab Rasel",
+      email: "rasel@iqrainternational.online",
+      phone: "+46738752087",
+      address: "Norrköping, Sweden",
+      rank: "IT Executive & Education Consultant",
     },
     {
-      name: "Alice Johnson",
-      email: "alice.johnson@example.com",
-      phone: "+1122334455",
-      address: "789 Oak St, City, Country",
-      rank: "Marketing Manager",
+      name: "Taj Uddin",
+      email: "taj@iqrainternational.online",
+      phone: "+8801886978496",
+      address: "Munsibazar, Moulvibazar",
+      rank: "Finance & Marketing Manager",
     },
   ];
   const handleSubmit = async (e) => {
@@ -152,7 +152,7 @@ export default function ContactPage() {
       <div className="min-h-screen">
         <div className="mx-auto my-6 max-w-screen-lg px-2 py-8 text-sm shadow-2xl">
           <ImageSlider slides={slides} />
-          <div  className="mx-auto mb-6 max-w-screen-lg bg-[#2A2A2A] p-8 text-sm uppercase  shadow-2xl rounded-md">
+          <div className="mx-auto mb-6 max-w-screen-lg bg-[#2A2A2A] p-8 text-sm uppercase  shadow-2xl rounded-md">
             <h1 className="text-white m-5 text-xl font-semibold text-center">
               Book A Schedule
             </h1>
@@ -369,7 +369,7 @@ export default function ContactPage() {
         </div>
         <div className="text-center">
           <h1 className="text-white m-5 text-xl font-semibold">
-          Meet Our Specialists
+            Meet Our Specialists
           </h1>
           <hr className="border-t-2 border-gray-300 mx-auto w-1/2" />
         </div>
@@ -392,11 +392,24 @@ export default function ContactPage() {
                 </div>
                 <div className="mt-4">
                   <p className="text-sm text-white">
-                    <strong>Email:</strong> {member.email}
+                    <strong>Email:</strong>{" "}
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="text-blue-400 underline"
+                    >
+                      {member.email}
+                    </a>
                   </p>
                   <p className="text-sm text-white">
-                    <strong>Phone:</strong> {member.phone}
+                    <strong>Phone:</strong>{" "}
+                    <a
+                      href={`tel:${member.phone}`}
+                      className="text-blue-400 underline"
+                    >
+                      {member.phone}
+                    </a>
                   </p>
+
                   <p className="text-sm text-white">
                     <strong>Address:</strong> {member.address}
                   </p>
