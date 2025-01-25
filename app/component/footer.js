@@ -8,13 +8,13 @@ export function Footer() {
     <>
       <div className="flex justify-center gap-4 p-6 text-2xl bg-black mr-10 md:text-2xl lg:text-3xl lg:mr-20">
 
-        <Link
+        {/* <Link
           href=""
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaInstagramSquare className="hover:text-[#444444]" />
-        </Link>
+        </Link> */}
 
         <Link href="tel:01571311765">
           <MdAddCall className="hover:text-[#444444]" />
@@ -23,7 +23,7 @@ export function Footer() {
           <MdMarkEmailUnread className="hover:text-[#444444]" />
         </Link>
         <Link
-          href=""
+          href="https://www.facebook.com/share/1Ay2ZWhikB/"
           target="_blank"
           rel="noopener noreferrer"
         >
