@@ -258,7 +258,7 @@ export default function ContactPage() {
                       htmlFor="date"
                       className="block text-sm font-bold text-white"
                     >
-                      Date of Booking
+                      Enter a Date
                     </label>
                     <input
                       type="date"
@@ -277,7 +277,7 @@ export default function ContactPage() {
                       htmlFor="time"
                       className="block text-sm font-bold text-white"
                     >
-                      Time
+                      Fix a Time
                     </label>
                     <select
                       name="time"
@@ -304,19 +304,27 @@ export default function ContactPage() {
                     >
                       IELTS Score
                     </label>
-                    <input
-                      type="number"
+                    <select
                       name="ielts"
                       id="ielts"
                       value={formData.ielts || ""}
                       onChange={handleChange}
                       className="mt-1 block w-full h-8 rounded-sm border-gray-300 p-2 text-black shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                      min="0"
-                      placeholder="Don't have: Enter 0"
-                    />
+                    >
+                      <option value="">Select your IELTS Score</option>
+                      {[...Array(10)].map((_, index) => {
+                        const score = 3.5 + index * 0.5;
+                        return (
+                          <option key={score} value={score}>
+                            {score}
+                          </option>
+                        );
+                      })}
+                      <option value="0">Don't have: Enter 0</option>
+                    </select>
                     {formData.ielts > 8 && (
                       <p className="mt-1 text-xs text-red-500">
-                        Something Wrong
+                        Not more than 8!!!
                       </p>
                     )}
                   </div>
