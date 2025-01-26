@@ -50,7 +50,7 @@ export default function ContactPage() {
   const teamMembers = [
     {
       name: "Md Abdul Muhit",
-      email: "rasel@iqrainternational.online",
+      email: "muhit@iqrainternational.online",
       phone: "+8801571311765",
       address: "Shah Mustofa Road, Moulovibazar",
       rank: "CEO & Education Consultant",
