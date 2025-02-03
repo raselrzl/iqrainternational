@@ -35,9 +35,6 @@ export default function ContactPage() {
     }
     if (!formData.dateofbirth) {
       formErrors.dateofbirth = "Date of Birth is required";
-    } else if (!/^\d{6}$|^\d{8}$/.test(formData.dateofbirth)) {
-      formErrors.dateofbirth =
-        "Date of Birth must be in the format YYMMDD or YYYYMMDD";
     }
     if (!formData.phoneNumber)
       formErrors.phoneNumber = "phoneNumber is required";
@@ -233,14 +230,12 @@ export default function ContactPage() {
                       Date of Birth
                     </label>
                     <input
-                      type="text"
+                      type="date"
                       name="dateofbirth"
                       id="dateofbirth"
                       value={formData.dateofbirth || ""}
-                      onChange={handleChange}
-                      maxLength={8} // Maximum length for the full format (YYYYMMDDXXXX)
-                      pattern="\d{6}|\d{8}" // Ensures input is 10 or 12 digits
-                      placeholder="YYYYMMDD"
+                      onChange={handleChange}                      
+                      placeholder="mm/dd/yyyy"
                       className="mt-1 block w-full h-8 rounded-sm border-gray-300 p-2 text-black shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                     />
                     {errors.dateofbirth && (
