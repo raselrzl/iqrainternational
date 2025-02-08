@@ -37,10 +37,10 @@ export default function ProfileCounter() {
 
   return (
     <div className="flex justify-center bg-black space-x-8 mt-20">
-      <div className="bg-black border-4 border-red-500 p-8 rounded-full shadow-lg flex justify-center items-center w-28 h-28">
+      <div className="bg-black border-4 border-yellow-500 p-8 rounded-full shadow-lg flex justify-center items-center w-28 h-28">
         <div className="text-center">
-          <h1 className="text-sm font-bold text-red-500">Total File</h1>
-          <p className="text-2xl mt-4 text-red-500 font-extrabold">
+          <h1 className="text-sm font-bold text-yellow-500">Total File</h1>
+          <p className="text-2xl mt-4 text-yellow-500 font-extrabold">
             {totalFiles}+
           </p>
         </div>
