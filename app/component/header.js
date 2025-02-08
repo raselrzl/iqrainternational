@@ -35,6 +35,9 @@ export default function Header() {
         </div>
 
         {/* Footer for larger screens only */}
+        <h2 className="text-md text-center mr-10 font-extrabold uppercase tracking-wide blink text-yellow-300">
+            September Intake!
+          </h2>
         <div className="hidden lg:block">
           <Footer />
         </div>
