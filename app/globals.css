@@ -150,3 +150,14 @@ html {
   height: 3rem; /* 48px */
   animation: ring 1s linear infinite;
 }
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
