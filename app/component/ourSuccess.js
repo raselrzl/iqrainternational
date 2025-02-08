@@ -13,7 +13,7 @@ export default function OurSuccess() {
   ];
 
   return (
-    <section className="mx-auto max-w-screen-lg bg-black p-10 text-center text-sm uppercase text-white shadow-2xl">
+    <section className="mx-auto max-w-screen-lg bg-black p-6 text-center text-sm uppercase text-white shadow-2xl">
       <h2 className="text-2xl font-semibold uppercase mb-4 text-center text-white">
         Do you want to be in the success list??
       </h2>
