@@ -23,8 +23,8 @@ export default function Study() {
   ];
 
   return (
-    <div className="mx-4">
-      <div className="bg-gradient-to-r from-green-500 to-indigo-600 text-white text-center py-6 px-8 shadow-lg max-w-md mx-auto mt-28">
+    <div className="flex flex-col items-center justify-center text-center h-full w-full">
+      <div className="bg-gradient-to-r from-green-500 to-indigo-600 text-white text-center py-6 px-8 shadow-lg max-w-md mt-28 mx-6 rounded-lg">
         <h2 className="text-2xl font-bold uppercase mb-2">Now Accepting Files!</h2>
         <p className="text-lg font-medium">
           We are currently accepting applications for the{" "}
