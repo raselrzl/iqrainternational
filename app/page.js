@@ -28,7 +28,7 @@ export default function Home() {
       <div className="max-w-screen-2xl mx-auto px-2 lg:px-0">
         <ImageSlider slides={slides} />
         <div className="text-center bg-[#2A2A2A] text-white rounded-lg p-4 border-1 border-gray-700 mx-4 mt-16">
-          <h2 className="text-2xl font-extrabold uppercase tracking-wide mb-2  text-yellow-300">
+          <h2 className="text-xl font-extrabold uppercase tracking-wide mb-2  text-yellow-300">
             Now Accepting Student Files!
           </h2>
 
